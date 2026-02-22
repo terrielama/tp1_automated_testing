@@ -58,3 +58,22 @@ def test_display_board__after_some_plays():
     # Then
     assert board == expected_board
 
+# ------------------------------
+
+def test_user_scenario():
+    game = connect4.Connect4()
+
+    # When
+    game.play_column(1)
+    game.play_column(2)
+    game.play_column(1)
+    game.play_column(2)
+    game.play_column(1)
+    game.play_column(2)
+    game.play_column(1)
+
+    # Then
+    assert game.has_ended() == True
+    assert game.display_result() == game._board + "\nPlayer 1 won"
+
+# ------------------------------
