@@ -1,0 +1,12 @@
+{
+    "python.analysis.extraPaths": [
+        "./esgi_automated_testing-main/src"
+    ],
+    "python-envs.pythonProjects": [
+        {
+            "path": "esgi_automated_testing-main",
+            "envManager": "ms-python.python:venv",
+            "packageManager": "ms-python.python:pip"
+        }
+    ]
+}
