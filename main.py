@@ -2,20 +2,21 @@
 import connect4
 
 def main():
+    print("Let's play connect4!")
     game = connect4.Connect4()
-    depth = 3  # suffisant pour un rendu
+    depth = 3 
 
     while not game.has_ended():
-        # Humain (joueur 1)
+        # Vous (joueur 1)
         col = game.ask_user_his_column()
         game.play_column(col)
 
         if game.has_ended():
             break
 
-        # IA (joueur 2)
+        # (joueur 2)
         ai_col = connect4.find_minmax_move(game, depth, 2)
-        print(f"L'IA joue colonne {ai_col}")
+        print(f"Votre adversaire joue colonne {ai_col}")
         game.play_column(ai_col)
 
     print(game.display_board())
